@@ -1,1 +1,8 @@
-<p>header-component works!</p>
+<p-menubar [model]="items">
+    <input type="text" pInputText placeholder="Buscar">
+</p-menubar>
+
+<div class="card flex justify-content-center">
+    <p-menu #menu [model]="items" [popup]="true" />
+    <p-button (onClick)="menu.toggle($event)" icon="pi pi-ellipsis-v"/>
+</div>
